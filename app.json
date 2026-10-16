@@ -1,13 +1,15 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Примерка",
+    "slug": "primerka",
+    "scheme": "primerka",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "ru.primerka.prototype"
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +18,42 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "ru.primerka.prototype"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Разрешите Примерке использовать камеру для снимков образа.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Разрешите Примерке найти знакомых по номерам из телефонной книги."
+        }
+      ],
+      "expo-system-ui",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Разрешите Примерке выбрать фотографию профиля.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "backgroundColor": "#F6F1E8"
   }
 }

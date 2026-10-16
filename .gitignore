@@ -6,6 +6,11 @@ node_modules/
 # Expo
 .expo/
 dist/
+dist-native-check/
+.netlify/
+primerka-netlify.zip
+dist-ios/
+dist-ios-router/
 web-build/
 expo-env.d.ts
 
@@ -39,3 +44,10 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.ipa
+*.xcarchive

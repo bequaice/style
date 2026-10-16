@@ -1,0 +1,9 @@
+/home          /home.html          200
+/events        /events.html        200
+/chat          /chat.html          200
+/camera        /camera.html        200
+/new-group     /new-group.html     200
+/participants  /participants.html  200
+/friends       /friends.html       200
+/profile       /profile.html       200
+/notifications /notifications.html 200
